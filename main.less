@@ -1,0 +1,117 @@
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+}
+
+.transform (@angle: 45px) {
+    transform:rotate(@angle);
+    -ms-transform:rotate(@angle);
+    -moz-transform:rotate(@angle);
+    -webkit-transform:rotate(@angle);
+}
+
+body{
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px;
+    width: 300px;
+}
+.logo {
+    height: 200px;
+    width: 200px;
+
+    .rectangle{
+        border-left: 20px solid #595A5E;
+        border-bottom: 20px solid #595A5E;
+        height: 110px;
+        width: 110px;
+        .rounded-corners(10px);
+        position: absolute;
+        margin-top: 40px;
+
+        .top {
+            width: 50px;
+            .rounded-corners(0px);
+            -webkit-border-top-right-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            -moz-border-radius-bottomright: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: #595A5E;
+            height: 20px;
+        }
+
+        .center{
+            height: 40px;
+        }
+
+        .bottom {
+            .rounded-corners(0px);
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #595A5E;
+            width: 20px;
+            float: right;
+            padding-top: 30px;
+            height: 20px;
+        }
+    }
+
+    .flower{
+        background-color: white;
+        height: 100px;
+        width: 100px;
+        position: relative;
+        left: 70px;
+        padding-left: 5px;
+
+        .leaf{
+            background-color: #EB8300;
+            opacity: 0.8;
+            width: 15px;
+            height: 90px;
+            margin-left: 40px;
+            position: absolute;
+            .rounded-corners(10px 50px);
+            
+            &#leaf1{
+
+            }
+
+            &#leaf2{
+                .transform(90deg);
+            }
+
+            &#leaf3{
+                .transform(135deg);   
+            }
+
+            &#leaf4{
+                height: 45px;
+                margin-left: 60px;
+                width: 13px;
+                margin-top: 5px;
+                .transform(45deg);
+                .rounded-corners(20px 60px);
+            }
+        }
+    }
+
+    .dot {
+        background-color: #C56101;
+        height: 10px;
+        width: 10px;
+        text-align: center;
+        .rounded-corners(10px);
+        margin-top: 40px;
+        margin-left: 3px;
+    }
+}
